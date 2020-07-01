@@ -16,7 +16,6 @@ REM To delete the dist folder
 cd ..
 echo delete-directory: "%cd%/dist"
 rmdir /s /q "%cd%/dist"
-cd..
-cd..
+cd ..
+cd ..
 echo Auto-Deploy-Complete!
-pause
