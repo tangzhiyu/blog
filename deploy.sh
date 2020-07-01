@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+set -e
 echo building...
 sh build.sh
 echo building-complete.
@@ -13,9 +13,8 @@ git pull
 git push --force origin HEAD:gh-pages
 
 REM To delete the dist folder
-cd ..
-echo delete-directory: "%cd%/dist"
-rmdir /s /q "%cd%/dist"
-cd ..
-cd ..
+# 退回开始所在目录
+cd -
+rm -rf docs/.vuepress/dist
+cd -
 echo Auto-Deploy-Complete!
